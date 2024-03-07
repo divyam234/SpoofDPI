@@ -15,7 +15,7 @@ type Config struct {
 	Port           *int
 	Dns            *string
 	Debug          *bool
-	NoBanner *bool
+	NoBanner       *bool
 	Timeout        *int
 	AllowedPattern *regexp.Regexp
 	AllowedUrls    *regexp.Regexp
@@ -53,9 +53,9 @@ func ParseArgs() {
 	config = &Config{}
 	config.Addr = flag.String("addr", "127.0.0.1", "Listen addr")
 	config.Port = flag.Int("port", 8080, "port")
-	config.Dns = flag.String("dns", "8.8.8.8", "DNS server")
+	config.Dns = flag.String("dns", "1.1.1.1", "DNS server")
 	config.Debug = flag.Bool("debug", false, "true | false")
-	config.NoBanner = flag.Bool("no-banner", false, "true | false")
+	config.NoBanner = flag.Bool("no-banner", true, "true | false")
 	config.Timeout = flag.Int("timeout", 0, "timeout in milliseconds")
 
 	flag.Var(&allowedHosts, "url", "Bypass DPI only on this url, can be passed multiple times")

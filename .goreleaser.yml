@@ -1,0 +1,40 @@
+project_name: spoof-dpi
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+      
+    main: cmd/spoof-dpi/main.go
+    flags: -trimpath
+    ldflags:
+     - -extldflags=-static
+     - -s -w
+    mod_timestamp: "{{ .CommitTimestamp }}"
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm
+      - arm64
+
+checksum:
+  name_template: "{{ .ProjectName }}_checksums.txt"
+  
+archives:
+  - name_template: "{{ .ProjectName }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        format: zip
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - '^ci:'
+      - 'README'
+      - Merge pull request
+      - Merge branch
