@@ -1,7 +1,7 @@
 package packet
 
 import (
-	"github.com/xvzc/SpoofDPI/util"
+	"github.com/divyam234/SpoofDPI/util"
 )
 
 type HttpsPacket struct {
@@ -26,7 +26,7 @@ func (p *HttpsPacket) SplitInChunks() [][]byte {
 
 	// If the packet matches the pattern or the URLs, we don't split it
 	if config.PatternExists() {
-		if (config.PatternMatches(p.Raw())) {
+		if config.PatternMatches(p.Raw()) {
 			return [][]byte{(p.Raw())[:1], (p.Raw())[1:]}
 		}
 

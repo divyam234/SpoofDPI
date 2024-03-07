@@ -6,9 +6,9 @@ import (
 	"net"
 	"time"
 
+	"github.com/divyam234/SpoofDPI/doh"
+	"github.com/divyam234/SpoofDPI/packet"
 	log "github.com/sirupsen/logrus"
-	"github.com/xvzc/SpoofDPI/doh"
-	"github.com/xvzc/SpoofDPI/packet"
 )
 
 const BUF_SIZE = 1024

@@ -2,8 +2,6 @@
 
 # SpoofDPI
 
-Read in other Languages: [🇬🇧English](https://github.com/xvzc/SpoofDPI), [🇰🇷한국어](https://github.com/xvzc/SpoofDPI/blob/main/readme_ko.md), [🇨🇳简体中文](https://github.com/xvzc/SpoofDPI/blob/main/readme_zh-cn.md), [🇷🇺Русский](https://github.com/xvzc/SpoofDPI/blob/main/readme_ru.md)
-
 A simple and fast software designed to bypass **Deep Packet Inspection**  
   
 ![image](https://user-images.githubusercontent.com/45588457/148035986-8b0076cc-fefb-48a1-9939-a8d9ab1d6322.png)
@@ -20,30 +18,30 @@ export PATH=$PATH:~/.spoof-dpi/bin
 Install the latest binary with curl
 - OSX
 ```
-curl -fsSL https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s osx
+curl -fsSL https://raw.githubusercontent.com/divyam234/SpoofDPI/main/install.sh | bash -s osx
 ```
 - Linux
 ```
-curl -fsSL https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s linux
+curl -fsSL https://raw.githubusercontent.com/divyam234/SpoofDPI/main/install.sh | bash -s linux
 ```
 ### wget
 Install the latest binary with wget
 - OSX
 ```
-wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s osx 
+wget -O - https://raw.githubusercontent.com/divyam234/SpoofDPI/main/install.sh | bash -s osx 
 ```
 - Linux
 ```
-wget -O - https://raw.githubusercontent.com/xvzc/SpoofDPI/main/install.sh | bash -s linux 
+wget -O - https://raw.githubusercontent.com/divyam234/SpoofDPI/main/install.sh | bash -s linux 
 ```
 ## Go
 You can also install SpoofDPI with **go install**  
-`$ go install github.com/xvzc/SpoofDPI/cmd/spoof-dpi`  
+`$ go install github.com/divyam234/SpoofDPI/cmd/spoof-dpi`  
   > Remember that $GOPATH should be set in your $PATH
 
 ## Git
 You can also build your own  
-`$ git clone https://github.com/xvzc/SpoofDPI.git`  
+`$ git clone https://github.com/divyam234/SpoofDPI.git`  
 `$ cd SpoofDPI`  
 `$ go build ./cmd/...`  
 

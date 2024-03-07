@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/divyam234/SpoofDPI/net"
+	"github.com/divyam234/SpoofDPI/packet"
+	"github.com/divyam234/SpoofDPI/util"
 	log "github.com/sirupsen/logrus"
-	"github.com/xvzc/SpoofDPI/net"
-	"github.com/xvzc/SpoofDPI/packet"
-	"github.com/xvzc/SpoofDPI/util"
 )
 
 type Proxy struct {
@@ -40,10 +40,10 @@ func (p *Proxy) Start() {
 	}
 
 	if p.timeout > 0 {
-        log.Println(fmt.Sprintf("Connection timeout is set to %dms", p.timeout))
-    }
+		log.Println(fmt.Sprintf("Connection timeout is set to %dms", p.timeout))
+	}
 
-    log.Println("Created a listener on port", p.Port())
+	log.Println("Created a listener on port", p.Port())
 
 	for {
 		conn, err := l.Accept()
