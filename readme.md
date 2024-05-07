@@ -1,10 +1,6 @@
-**⭐PRs or any form of contribution will be appreciated⭐**
-
 # SpoofDPI
 
-A simple and fast software designed to bypass **Deep Packet Inspection**  
-  
-![image](https://user-images.githubusercontent.com/45588457/148035986-8b0076cc-fefb-48a1-9939-a8d9ab1d6322.png)
+A simple and fast software designed to bypass **Deep Packet Inspection** 
 
 # Installation
 ## Binary
