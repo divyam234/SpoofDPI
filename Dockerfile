@@ -12,4 +12,4 @@ COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 COPY --from=builder  /app/spoof-dpi /spoof-dpi
 
-ENTRYPOINT ["/spoof-dpi","-addr","0.0.0.0"]
+ENTRYPOINT ["/spoof-dpi","-addr","0.0.0.0","-port","3128"]
